@@ -10,6 +10,9 @@ This repo for training purpose and we are deploy the hello world application usi
 6. powershell : how to install the Azure powershell : 
 
 Install the Az modules in powershell 
+
 $PSVersionTable.PSVersion
+
 Install-Module -Name AZ -Repository PSGallery -Scope CurrentUser
+
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
