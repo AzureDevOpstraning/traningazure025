@@ -3,7 +3,7 @@ This repo for training purpose and we are deploy the hello world application usi
 
 
 1. Azure Portal : Portal.azure.com
-2. DevOps portal : Dev.portal.com
+2. DevOps portal : Dev.azure.com
 3. Git : How to install the git  : https://git-scm.com/downloads
 4. GitHub : Create the GitHib account : https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home
 5. Terraform : how to install the terraform : https://developer.hashicorp.com/terraform/install
