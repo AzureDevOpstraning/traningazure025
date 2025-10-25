@@ -32,5 +32,13 @@ $resourcegroup = @(
 
   }
 
+Core Powershell :
 
+# creating the folder
+
+New-Item -Path 'C:\Users\Vangaveeti\OneDrive\Desktop\Training Doc\learning\learning.ps1' -ItemType File
+
+$pathvalue = 'C:\Users\Vangaveeti\OneDrive\Desktop\Training Doc\learning\learning.ps1'
+
+Get-Content $pathvalue
 
