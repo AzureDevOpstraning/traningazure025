@@ -1,0 +1,36 @@
+#Login and set the subscription 
+Login-AzAccount -UseDeviceAuthentication
+Set-AzContext -SubscriptionId "xxxx-xxxxx-xxxxx" -Tenant "xxxx-xxxxx-xxxx"
+
+#To create the Resurce group
+New-AzResourceGroup -name "learningbatch25" -Location "westus"
+
+#Using foreach and if condtion
+
+$resourcegroup = @( 
+   @{ Name = "rg001"; Location = "EastUS"},
+   @{ Name = "RG002"; Location = "WestUS"}
+   )
+
+
+   foreach ($rg in $resourcegroup) {
+    $rgname = $rg.Name
+    $rgLocation = $rg.Location
+
+    Write-Host "checking rg: $rgname"
+
+    $ExistingRG = Get-AzResourceGroup -Name $rgname -ErrorAction SilentlyContinue
+
+    if ($null -eq $ExistingRG) {
+
+     New-AzResourceGroup -Name $rgname -Location $rgLocation
+
+    }
+    else {
+     Write-Host " resource group $rgname already exist"
+    }
+
+  }
+
+
+
