@@ -42,3 +42,20 @@ $pathvalue = 'C:\Users\Vangaveeti\OneDrive\Desktop\Training Doc\learning\learnin
 
 Get-Content $pathvalue
 
+Virtual Network:
+
+
+
+#Variables
+
+$rgname = "VritualNetworkresourcegroup"
+$location = "EastUS"
+$Vnetname= "vnet00004"
+$subnetname ="subnet00004"
+$vnetAddress = "10.0.0.0/25"
+$subnetaddress = "10.0.0.0/26"
+
+$subnet1 = New-AzVirtualNetworkSubnetConfig -Name $subnetname -AddressPrefix $subnetaddress
+
+$Vnet = New-AzVirtualNetwork -Name $Vnetname -ResourceGroupName $rgname -Location $location -AddressPrefix $vnetAddress -Subnet $subnet1
+
